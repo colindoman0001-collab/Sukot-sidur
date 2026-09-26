@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sukkot Sidur</string>
+    <string name="notif_channel_name">Prayer Reminders</string>
+    <string name="notif_channel_desc">Reminders for zmanim and Sukkot tefillot</string>
+</resources>

@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f3eee4;
+  --color-surface: #eae3d6;
+  --color-surface-2: #e2d9c8;
+  --color-fg: #1b1714;
+  --color-muted: #6f675c;
+  --color-faint: #9a9184;
+  --color-accent: #3e4c5a;
+  --color-accent-fg: #f3eee4;
+  --color-border: color-mix(in oklab, #1b1714 12%, transparent);
+  --color-ring: #3e4c5a;
+  --color-live: #4a5c46;
+  --color-live-fg: #f3eee4;
+  --color-warn: #8a4b32;
+
+  --font-sans: "Heebo", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Frank Ruhl Libre", "David Libre", "Times New Roman", serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-2xl: 36px;
+
+  --shadow-border:
+    0px 0px 0px 1px color-mix(in oklab, var(--color-fg) 8%, transparent),
+    0px 1px 2px -1px color-mix(in oklab, var(--color-fg) 8%, transparent),
+    0px 8px 24px -12px color-mix(in oklab, var(--color-fg) 12%, transparent);
+}
+
+html.night {
+  --color-bg: #141210;
+  --color-surface: #1e1a16;
+  --color-surface-2: #28231e;
+  --color-fg: #f3eee4;
+  --color-muted: #a39a8c;
+  --color-faint: #7a7268;
+  --color-accent: #c9bba6;
+  --color-accent-fg: #141210;
+  --color-border: color-mix(in oklab, #f3eee4 12%, transparent);
+  --color-ring: #c9bba6;
+  --color-live: #c9bba6;
+  --color-live-fg: #141210;
+  --color-warn: #d4a28c;
+  --shadow-border: 0 0 0 1px color-mix(in oklab, var(--color-fg) 10%, transparent);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    background-image:
+      radial-gradient(
+        ellipse 120% 50% at 50% -10%,
+        color-mix(in oklab, var(--color-surface) 70%, transparent),
+        transparent 60%
+      );
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-accent) 22%, transparent);
+    color: var(--color-fg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

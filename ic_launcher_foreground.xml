@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Simple placeholder: a palm-frond-like shape. Replace with a real icon via
+         Android Studio's Image Asset tool before publishing. -->
+    <path
+        android:fillColor="#C9A227"
+        android:pathData="M54,20 L60,54 L54,88 L48,54 Z" />
+    <path
+        android:fillColor="#3E6B4F"
+        android:pathData="M54,30 L74,50 L54,58 L34,50 Z" />
+</vector>
